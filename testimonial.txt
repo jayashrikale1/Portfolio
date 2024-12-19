@@ -1,0 +1,351 @@
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Client Testimonials</h2>
+                    <div class="title-line"></div>
+                    <p>What our valued clients say about our exceptional Flutter
+                        development services</p>
+                </div>
+
+                <div class="testimonials-wrapper">
+                    <div class="testimonial-grid">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <img
+                                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Akash"
+                                alt="Akash Rathod"
+                                class="client-image">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="client-number">Client 3</h3>
+                            <p class="testimonial-text">
+                                "Sagar's expertise in Flutter development helped
+                                us create a seamless cross-platform
+                                experience for our users. His technical skills
+                                are truly impressive."
+                            </p>
+                            <div class="client-info">
+                                <h4 class="client-name">Akash Rathod</h4>
+                                <p class="client-designation">CTO, Mobile
+                                    Solutions</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <img
+                                src="https://api.dicebear.com/7.x/avataaars/svg?seed=John"
+                                alt="John Doe"
+                                class="client-image">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="client-number">Client 1</h3>
+                            <p class="testimonial-text">
+                                "Sagar is an exceptional Flutter developer who
+                                delivered our app ahead of schedule. His
+                                attention to detail and problem-solving skills
+                                are remarkable and exceeded our
+                                expectations."
+                            </p>
+                            <div class="client-info">
+                                <h4 class="client-name">John Doe</h4>
+                                <p class="client-designation">CEO, Tech
+                                    Solutions</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <img
+                                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane"
+                                alt="Jane Smith"
+                                class="client-image">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="client-number">Client 2</h3>
+                            <p class="testimonial-text">
+                                "Working with Sagar was a fantastic experience.
+                                He perfectly understood our requirements and
+                                delivered a high-quality mobile application that
+                                precisely met our needs."
+                            </p>
+                            <div class="client-info">
+                                <h4 class="client-name">Jane Smith</h4>
+                                <p class="client-designation">Product Manager,
+                                    Digital Innovations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+            testimonialCards.forEach(card => {
+                card.addEventListener('mousemove', function (e) {
+                    const rect = this.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+
+                    const angleX = -(e.clientY - centerY) / 20;
+                    const angleY = (e.clientX - centerX) / 20;
+
+                    this.style.transform = `
+                    rotateX(${angleX}deg) 
+                    rotateY(${angleY}deg) 
+                    translateZ(50px) 
+                    scale(1.05)
+                `;
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = `
+                    rotateX(0deg) 
+                    rotateY(0deg) 
+                    translateZ(0) 
+                    scale(1)
+                `;
+                });
+            });
+        });
+    </script>
+        <style>
+        :root {
+            --primary-gradient: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            perspective: 1000px;
+        }
+
+        .testimonials-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+            text-align: center;
+            transform: translateZ(50px);
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-line {
+            width: 100px;
+            height: 4px;
+            background: var(--primary-gradient);
+            margin: 0 auto 25px;
+            border-radius: 2px;
+        }
+
+        .testimonials-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+            transform-style: preserve-3d;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            transform: rotateX(0) rotateY(0) translateZ(0);
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.1),
+                    transparent);
+            transform: rotate(-45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .testimonial-card:hover::before {
+            opacity: 1;
+        }
+
+        .testimonial-card:hover {
+            transform:
+                rotateX(5deg) rotateY(-5deg) translateZ(50px) scale(1.05);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .client-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #6a11cb;
+            margin: 0 auto 20px;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .testimonial-card:hover .client-image {
+            transform:
+                rotate(360deg) scale(1.1) translateZ(30px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            transform: translateZ(20px);
+        }
+
+        .rating .fa-star {
+            color: #ffc107;
+            font-size: 1.5rem;
+            margin: 0 3px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover .rating .fa-star {
+            transform: scale(1.2);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            position: relative;
+            transform: translateZ(10px);
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            color: #6a11cb;
+            font-size: 2rem;
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        .testimonial-text::before {
+            left: -20px;
+            top: -10px;
+        }
+
+        .testimonial-text::after {
+            right: -20px;
+            bottom: -10px;
+        }
+
+        .client-info {
+            transform: translateZ(15px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+        <!-- Add this CSS to your existing styles -->
+        <style>
+        /* Resume Section Styles */
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+    </style>
+
+        <!-- Add this JavaScript to initialize the carousel -->
+        <script>
+        $(document).ready(function () {
+            // Initialize Certification Carousel
+            $('.certification-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 3 }
+                }
+            });
+
+            // Initialize Testimonial Carousel
+            $('.testimonial-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 3 }
+                }
+            });
+        });
+    </script>
