@@ -1583,52 +1583,44 @@
                             </div>
                         </div>
 
-                        <!-- Project 3: Fourvac Dynamic Platform -->
-                        <div class="item" data-aos="fade-up"
-                            data-aos-delay="200">
+                        <!-- Project: Hotel Booking Platform -->
+                        <div class="item" data-aos="fade-up">
                             <div class="project-card card-3d-hover">
-                                <div class="project-img position-relative">
-                                    <img src="assets/img/fourvac.jpeg"
-                                        alt="Fourvac Dynamic Platform"
-                                        class="img-fluid">
-                                    <div
-                                        class="project-overlay position-absolute d-flex justify-content-center align-items-center">
-                                        <div class="d-flex gap-3">
-                                            <a href="https://fourvac.com/"
-                                                target="_blank"
-                                                class="btn btn-light rounded-circle"
-                                                title="View Live">
-                                                <i class="fas fa-link"></i>
-                                            </a>
-                                            <a
-                                                href="https://github.com/jayashrikale1/forvacproject"
-                                                class="btn btn-light rounded-circle"
-                                                title="View Code on GitHub">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="project-img project-img-icon position-relative">
+                                    <i class="fas fa-hotel"></i>
                                 </div>
                                 <div class="project-content text-center">
-                                    <h4 class="project-title">Fourvac Dynamic
-                                        Platform</h4>
+                                    <h4 class="project-title">Hotel Booking Platform</h4>
                                     <div class="project-tags">
-                                        <span
-                                            class="badge bg-primary">Thymeleaf</span>
-                                        <span class="badge bg-success">Spring
-                                            Boot</span>
-                                        <span class="badge bg-info">Java</span>
-                                        <span class="badge bg-warning">REST
-                                            API</span>
+                                        <span class="badge bg-primary">Laravel</span>
+                                        <span class="badge bg-success">Razorpay</span>
+                                        <span class="badge bg-info">Queues</span>
+                                        <span class="badge bg-warning">REST API</span>
                                     </div>
-                                    <p class="mt-2">
-                                        Developed a dynamic platform with Spring
-                                        Boot and Thymeleaf for efficient content
-                                        management.
-                                    </p>
+                                    <p class="mt-2">Multi-role booking system (Admin, Vendor, Customer) with room availability APIs, real-time validation and Razorpay payments.</p>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Project: Multi-Panel E-Commerce Platform -->
+                        <div class="item" data-aos="fade-up">
+                            <div class="project-card card-3d-hover">
+                                <div class="project-img project-img-icon position-relative">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="project-content text-center">
+                                    <h4 class="project-title">Multi-Panel E-Commerce Platform</h4>
+                                    <div class="project-tags">
+                                        <span class="badge bg-primary">Laravel</span>
+                                        <span class="badge bg-success">JWT</span>
+                                        <span class="badge bg-info">Docker</span>
+                                        <span class="badge bg-warning">AWS</span>
+                                    </div>
+                                    <p class="mt-2">Admin, Dealer and Customer portals with JWT-secured APIs, analytics dashboards, DTDC shipment tracking and OTP alerts.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -1706,6 +1698,82 @@
 
     .project-card:hover .project-img-icon i {
         transform: scale(1.15);
+    }
+
+    /* Uniform project cards: same image height, equal card heights */
+    .project-carousel .owl-stage {
+        display: flex;
+    }
+
+    .project-carousel .owl-item {
+        display: flex;
+    }
+
+    .project-carousel .item {
+        display: flex;
+        width: 100%;
+    }
+
+    .project-carousel .project-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 15px 5px 25px;
+    }
+
+    .project-carousel .project-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .project-carousel .project-img,
+    .project-carousel .project-img-icon {
+        height: 200px;
+        flex-shrink: 0;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .project-carousel .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .project-carousel .project-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: none;
+        box-shadow: none;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .project-carousel .project-title {
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .project-carousel .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        min-height: 30px;
+    }
+
+    .project-carousel .badge {
+        font-size: 12px;
+        margin: 0;
+        padding: 6px 10px;
+    }
+
+    .project-carousel .project-content p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
     }
 
     .badge {
